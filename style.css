@@ -1,0 +1,199 @@
+/* 1. pengaturan dasar */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0; /* menghapus jarak luar bawaan browser */
+    padding: 0; /* menghapus jarak luar bawaan browser */
+
+    font-family: Quicksand, sans-serif;
+    background: linear-gradient(135deg, #AA5E7A, #7C0E44);
+    color: white;
+
+    min-height: 100vh;
+}
+
+/*2 header dan judul utama */
+.site-header {
+    padding: 10px 20px 0px;
+}
+h1 {
+    width: 100%; /*lebar */
+    max-width: 1100px; /* membatasi lebar */
+    margin: 0 auto;
+    padding: 18px 24px;
+
+    text-align: center;
+    font-size: 50px;
+    letter-spacing: 2px;
+    background-color: #6e0e3d;
+    
+    border-radius: 16px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+/*3 main content */
+.main-content {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+    padding: 20px 24px 40px;
+}
+
+.menu-section {
+    margin-bottom: 42px;
+}
+
+h2 {
+    margin: 0 0 18px;
+    font: 26px;
+    font-weight: 700;
+    text-decoration: underline;
+}
+ 
+/*4. pembungkus tabel */
+.table-container {
+    width: 100%;
+
+    overflow-x: auto; /* tabel bisa di geser ke samping ketika layar kecil */
+    border: 1px solid #ffffffa6;
+    border-radius: 16px;
+
+    background-color: #ffffff0f;
+    box-shadow: 0 6px 18px #3200191f;
+}
+
+/* 5. tampilan table */
+.menu-table {
+    width: 100%;
+    min-width: 760px;
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.6;
+
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.menu-table th,
+.menu-table td {
+    padding: 17px;
+    border: 1px solid #ffffff59;
+    vertical-align: middle;
+}
+
+.menu-table th { /*tampilan khusus pada judul kolom */
+   font-weight: 700;
+   text-align: left;
+   background-color: #5c072fb8;
+}
+
+/* lebar masing2 kolom */
+.menu-table th:nth-child(1),
+.menu-table td:nth-child(1) {
+    width: 12%;
+}
+
+.menu-table th:nth-child(2),
+.menu-table td:nth-child(2) {
+    width: 20%;
+}
+
+.menu-table th:nth-child(3),
+.menu-table td:nth-child(3) {
+    width: 40%; 
+}
+
+.menu-table th:nth-child(4),
+.menu-table td:nth-child(4) {
+    width: 8%;
+}
+
+/* warna latar baris table */
+.menu-table tbody tr {
+    background-color: #ffffff59;
+    transition: background-color 0.25s ease;
+}
+
+.menu-table tbody tr:nth-child(even) { /*  warna berbeda pada garis genap */
+    background-color: #ffffff12;
+}
+
+/* efek ketika kusrsor ke baris*/
+.menu-table tbody tr:hover {
+    background-color: #ffdceb29;
+}
+
+/* 6. img */
+.menu-table img {
+    display: block;
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+    
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px #32001926;
+    transition: transform 0.25s ease;
+}
+
+.menu-table img:hover {
+    transform: scale(1.04);
+}
+
+/* 7. footer */
+footer {
+    font-weight: 700;
+    text-align: center;
+    background-color: #6e0e3d;
+    width: 100%;
+    padding: 10px 16px; /*memberi ruang kosng */
+    border-top: 3px solid #ffffff40;
+}
+
+/* 8. penyesuaian layar kecil */
+@media (max-width: 600px) {
+    .site-header {
+        padding: 16px 12px 8px;
+    }
+
+    h1 {
+        padding: 16px 12px;
+        letter-spacing: 1px;
+    }
+
+    .main-content {
+        padding: 18px 12px 30px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .menu-section {
+        margin-bottom: 30px;
+    }
+
+    .menu-table {
+        min-width: 680px;
+    }
+
+    .menu-table, th
+    .menu-table td {
+        padding:  12px;
+        font-size: 14px;
+    }
+
+    .menu-table img {
+        width: 140px;
+        height: 105px;
+    }
+
+    footer {
+        padding:  20px 12px;
+        font-size: 14px;
+    }
+}
+
+
